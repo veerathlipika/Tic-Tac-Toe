@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Animated Background Canvas -->
+    <div class="bg-canvas"></div>
+
+    <!-- Floating Geometric Shapes -->
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+    <div class="shape shape-4"></div>
+    <div class="shape shape-5"></div>
+    <div class="shape shape-6"></div>
+
+    <div class="container">
+        <h1>Tic-Tac-Toe Pro</h1>
+
+        <div class="mode-selection">
+            <div class="mode-buttons">
+                <button class="mode-btn active" onclick="setGameMode('pvp')">Player vs Player</button>
+                <button class="mode-btn" onclick="setGameMode('ai')">Player vs AI</button>
+            </div>
+        </div>
+
+        <div class="game-info">
+            <div class="current-player">
+                Current Player: <span class="player-indicator" id="currentPlayerDisplay">X</span>
+            </div>
+            <div class="score">
+                <span id="scoreX">X: 0</span> | <span id="scoreO">O: 0</span> | <span id="scoreDraw">Draws: 0</span>
+            </div>
+        </div>
+
+        <div class="status" id="gameStatus">Game started! Player X's turn</div>
+
+        <div class="game-board" id="gameBoard">
+            <button class="cell" onclick="makeMove(0)"></button>
+            <button class="cell" onclick="makeMove(1)"></button>
+            <button class="cell" onclick="makeMove(2)"></button>
+            <button class="cell" onclick="makeMove(3)"></button>
+            <button class="cell" onclick="makeMove(4)"></button>
+            <button class="cell" onclick="makeMove(5)"></button>
+            <button class="cell" onclick="makeMove(6)"></button>
+            <button class="cell" onclick="makeMove(7)"></button>
+            <button class="cell" onclick="makeMove(8)"></button>
+        </div>
+
+        <div class="controls">
+            <button class="btn" onclick="resetGame()">New Game</button>
+            <button class="btn secondary" onclick="resetScore()">Reset Score</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
